@@ -1,9 +1,27 @@
+:root {
+  --color-primary: #1addb3;
+  --color-secondary: #79f3b2;
+  --color-white: #fff;
+}
+
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+  outline: none;
+}
+
+button:focus {
+  outline: 0 !important;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+  color: var(--color-primary);
 }
 
 a {
@@ -13,4 +31,137 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.main {
+  /* background-color: var(--color-primary); */
+  background-color: #77aa77;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 2 1'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='1'%3E%3Cstop offset='0' stop-color='%2377aa77'/%3E%3Cstop offset='1' stop-color='%234fd'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='c' gradientUnits='userSpaceOnUse' x1='0' y1='0' x2='2' y2='2'%3E%3Cstop offset='0' stop-color='%23cf8' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23cf8' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='2' height='1'/%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23b)' points='0 1 0 0 2 0'/%3E%3Cpolygon fill='url(%23c)' points='2 1 2 0 0 0'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif !important;
+}
+
+label {
+  color: var(--color-white);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.right {
+  flex: 0 0 49%;
+}
+
+.left {
+  flex: 0 0 49%;
+}
+
+/* 
+input {
+  padding: 1rem;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: 2px solid var(--color-white);
+} */
+
+.main-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.binary-input {
+  padding: 0.55rem;
+  background-color: rgba(255, 255, 255, 0.788);
+  color: var(--color-primary);
+  /* border: 1px solid var(--color-primary); */
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 5px;
+  /* flex: 0 0 10%; */
+  /* flex: 0 0 10%; */
+  -webkit-box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  width: 22%;
+}
+
+.binary-input::placeholder {
+  color: var(--color-primary);
+}
+
+.binary-input-2 {
+  padding: 0.55rem;
+  background-color: rgba(255, 255, 255, 0.788);
+  color: var(--color-primary);
+  /* border: 1px solid var(--color-primary); */
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  border-radius: 5px;
+  /* flex: 0 0 10%; */
+  /* flex: 0 0 10%; */
+  -webkit-box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+}
+
+.binary-input-2::placeholder {
+  color: var(--color-primary);
+}
+
+.binary-button {
+  /* flex: 0 0 18%; */
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  padding: 0.55rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+
+  -webkit-box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 1px 2px 35px -10px rgba(0, 0, 0, 0.75);
+}
+
+.landing-form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.table {
+  width: 100%;
+  background-color: #fff;
+  padding: .5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: rgb(97, 97, 97);
+  padding: .8rem 1.5rem;
+}
+
+.table span {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.table-head span {
+  font-weight: 600;
 }
