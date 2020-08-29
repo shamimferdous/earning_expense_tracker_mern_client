@@ -14,7 +14,8 @@ const Index = (props) => {
   const authContext = useContext(AuthContext);
 
   function checkEnv() {
-    return `${process.env.passcode}`
+    console.log(process.env.passcode);
+    return `${process.env.passcode}`;
   }
 
 
